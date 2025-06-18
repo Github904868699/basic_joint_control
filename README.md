@@ -28,3 +28,7 @@ CAN 帧打包
 每轴独立 KP/KD，适应不同负载和刚度需求
 软启动，保护机械结构
 参数灵活，易于集成和调试
+
+roslaunch armcontrol_demo_pkg can1_bridge.launch
+rosrun armcontrol_demo_pkg basic_joint_control.py
+rostopic pub -r 20 /joint_cmds sensor_msgs/JointState "{name: ['j1','j2','j3','j4','j5','j6'], position: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]}"
