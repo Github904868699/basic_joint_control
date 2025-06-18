@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="socketcan_bridge" type="socketcan_bridge_node" name="can1_bridge">
+    <param name="can_device" value="can1"/>
+
+    <remap from="sent_messages"     to="/can1_tx"/>
+    <remap from="received_messages" to="/can1_rx"/>
+  </node>
+</launch>
+
